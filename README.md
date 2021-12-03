@@ -55,9 +55,9 @@ Chrome(80以降？)で横に長い線を引くとジェスチャーと誤認識�
 ## <a name="deploy">お絵かき掲示板の設置方法について</a>
 新しくお絵かき掲示板を設置したい方には、POTI-board改の利用をお勧めします。  
 
-- [POTI改公式サイト](https://pbbs.sakura.ne.jp/poti/)
+- [POTI改公式サイト](https://paintbbs.sakura.ne.jp/poti/)
 
-公式サイトには[設置サポート掲示板](https://pbbs.sakura.ne.jp/cgi/neosample/support/)があります。  
+公式サイトには[設置サポート掲示板](https://paintbbs.sakura.ne.jp/cgi/neosample/support/)があります。  
 掲示板の設置に関するご質問・不具合の報告等ありましたら、遠慮なくこちらへどうぞ。
 
 まだ古いPOTI-baordを稼働中の方のための[移行ガイド](README-potiboard.md)  
@@ -80,6 +80,10 @@ NEOの入っていない掲示板に投稿して、動作を確認すること�
     > npm run app
 
 ## <a name="history">履歴</a>
+
+#### ver1.5.15 (2021/11/07)
+- &lt;param name="neo_show_right_button" value="true">  
+  を指定すると、デスクトップでも「右」ボタンが常時表示されるようになりました。
 
 #### ver1.5.14 (2021/10/03)
 - url_saveを指定しないと投稿できなくなっていた問題を修正
