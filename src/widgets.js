@@ -191,7 +191,7 @@ Neo.ColorTip.prototype.init = function (name, params) {
   this.params = params || {};
   this.name = name;
 
-  this.selected = this.name == "color1" ? true : false;
+  this.selected = this.name == "neo-color1" ? true : false;
   this.isMouseDown = false;
 
   var ref = this;
@@ -225,7 +225,7 @@ Neo.ColorTip.prototype.init = function (name, params) {
 
   this.element.className = "colorTipOff";
 
-  var index = parseInt(this.name.slice(5)) - 1;
+  var index = parseInt(this.name.slice(9)) - 1; // "neo-color"なので9文字目
   this.element.style.left = index % 2 ? "0px" : "26px";
   this.element.style.top = Math.floor(index / 2) * 21 + "px";
 
@@ -1294,7 +1294,7 @@ Neo.ReserveControl.prototype.init = function (name, params) {
 
   this.element.className = "reserve";
 
-  var index = parseInt(this.name.slice(7)) - 1;
+  var index = parseInt(this.name.slice(11)) - 1; //neo-reserve なので11文字目
   this.element.style.top = "1px";
   this.element.style.left = index * 15 + 2 + "px";
 
@@ -1364,13 +1364,13 @@ Neo.ScrollBarButton.prototype.init = function (name, params) {
   this.element["data-bar"] = true;
   this.barButton["data-bar"] = true;
 
-  if (name == "scrollH") Neo.scrollH = this;
-  if (name == "scrollV") Neo.scrollV = this;
+  if (name == "neo-scrollH") Neo.scrollH = this;
+  if (name == "neo-scrollV") Neo.scrollV = this;
   return this;
 };
 
 Neo.ScrollBarButton.prototype.update = function (oe) {
-  if (this.name == "scrollH") {
+  if (this.name == "neo-scrollH") {
     var a = oe.destCanvas.width / (oe.canvasWidth * oe.zoom);
     var barWidth = Math.ceil(oe.destCanvas.width * a);
     var barX = oe.scrollBarX * (oe.destCanvas.width - barWidth);
@@ -1399,7 +1399,7 @@ Neo.ViewerButton.speedStrings = ["最", "早", "既", "鈍"];
 Neo.ViewerButton.prototype.init = function (name, params) {
   Neo.Button.prototype.init.call(this, name, params);
 
-  if (name != "viewerSpeed") {
+  if (name != "neo-viewerSpeed") {
     this.element.innerHTML = "<canvas width=24 height=24></canvas>";
     this.canvas = this.element.getElementsByTagName("canvas")[0];
     var ctx = this.canvas.getContext("2d", {
@@ -1413,7 +1413,7 @@ Neo.ViewerButton.prototype.init = function (name, params) {
       ctx.drawImage(img, 0, 0);
       Neo.tintImage(ctx, Neo.config.color_text);
     }.bind(this);
-    img.src = Neo.ViewerButton[name.toLowerCase().replace(/viewer/, "")];
+    img.src = Neo.ViewerButton[name.toLowerCase().replace(/neo-viewer/, "")];
   } else {
     this.element.innerHTML = "<div></div><canvas width=24 height=24></canvas>";
     this.update();
@@ -1422,7 +1422,7 @@ Neo.ViewerButton.prototype.init = function (name, params) {
 };
 
 Neo.ViewerButton.prototype.update = function () {
-  if (this.name == "viewerSpeed") {
+  if (this.name == "neo-viewerSpeed") {
     var mode = Neo.painter._actionMgr.speedMode();
     var speedString = Neo.translate(Neo.ViewerButton.speedStrings[mode]);
     this.element.children[0].innerHTML = "<div>" + speedString + "</div>";
@@ -1462,9 +1462,9 @@ Neo.ViewerBar.prototype.init = function (name, params) {
 
   this.element.style.display = "inline-block";
   this.element.innerHTML =
-    "<div id='viewerBarLeft'></div>" +
-    "<div id='viewerBarMark'></div>" +
-    "<div id='viewerBarText'>hoge</div>";
+    "<div id='neo-viewerBarLeft'></div>" +
+    "<div id='neo-viewerBarMark'></div>" +
+    "<div id='neo-viewerBarText'>hoge</div>";
   this.seekElement = this.element.children[0];
   this.markElement = this.element.children[1];
   this.textElement = this.element.children[2];

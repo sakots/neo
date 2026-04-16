@@ -1,6 +1,6 @@
 {
   "name": "paintbbs",
-  "version": "1.6.26",
+  "version": "1.6.34",
   "main": "app/main.js",
   "repository": {
     "type": "git",
@@ -8,8 +8,7 @@
   },
   "scripts": {
     "app": "electron .",
-    "format": "prettier --write src/[^l]*.js"
-  },
+ "format": "prettier --write \"src/!(lz-string).js\" \"sample/*.html\""},
   "devDependencies": {
     "@babel/preset-typescript": "^7.28.5",
     "gulp": "^5.0.0",

@@ -30,7 +30,7 @@
     margin: auto;
 }
 
-.NEO #neo-toolsWrapper {
+.NEO #toolsWrapper {
     width: 52px;
     display: table;
     position: absolute;
@@ -39,20 +39,20 @@
     z-index: 100;
 }
 
-.NEO #neo-tools {
+.NEO #tools {
     width: 52px;
     display: table-cell;
     vertical-align: middle;
     position: relative;
 }
 
-.NEO #neo-painterContainer {
+.NEO #painterContainer {
     display: table-cell;
     vertical-align: middle;
     position: relative;
 }
 
-.NEO #neo-painterWrapper {
+.NEO #painterWrapper {
     padding: 0 55px 0 0;
     position: relative;
 
@@ -68,11 +68,11 @@
     width: max-content; /* コンテンツを折り返さない */
 }
 
-.NEO #neo-lower {
+.NEO #lower {
     height: 30px;
 }
 
-.NEO #neo-painter {
+.NEO #painter {
     position: relative;
     padding: 20px 20px 20px 20px;
 
@@ -86,20 +86,20 @@
     background-color: white;
 }
 
-.NEO #neo-headerButtons {
+.NEO #headerButtons {
     position: absolute;
     top: 5px;
     left: 5px;
     z-index: 100;
 }
 
-.NEO #neo-footerButtons {
+.NEO #footerButtons {
     position: absolute;
     bottom: 5px;
     left: 5px;
 }
 
-.NEO #neo-window {
+.NEO #window {
     float: left;
 }
 
@@ -109,11 +109,11 @@
 -----------------------
 */
 
-.NEO #neo-pageView {
+.NEO #pageView {
     background-color: white;
 }
 
-.NEO #neo-windowView {
+.NEO #windowView {
     z-index: 9999;
     position: fixed;
     width: 100%;
@@ -129,7 +129,7 @@
 -----------------------
 */
 
-.NEO #neo-zoomMinus {
+.NEO #zoomMinus {
     padding: 0;
     margin: 0;
     width: 16px;
@@ -137,14 +137,14 @@
     margin-left: 1px;
 }
 
-.NEO #neo-zoomPlus {
+.NEO #zoomPlus {
     padding: 0;
     margin: 0;
     width: 16px;
     height: 16px;
 }
 
-.NEO #neo-zoomMinusWrapper {
+.NEO #zoomMinusWrapper {
     position: absolute;
     right: -20px;
     bottom: -21px;
@@ -153,7 +153,7 @@
     text-align: center;
 }
 
-.NEO #neo-zoomPlusWrapper {
+.NEO #zoomPlusWrapper {
     position: absolute;
     left: -21px;
     bottom: -21px;
@@ -163,7 +163,7 @@
     text-align: center;
 }
 
-.NEO #neo-scrollH {
+.NEO #scrollH {
     position: absolute;
     left: 1px;
     bottom: -20px;
@@ -171,7 +171,7 @@
     height: 18px;
 }
 
-.NEO #neo-scrollV {
+.NEO #scrollV {
     position: absolute;
     right: -20px;
     top: 1px;
@@ -179,22 +179,22 @@
     height: calc(100% - 2px);
 }
 
-.NEO #neo-scrollH div {
+.NEO #scrollH div {
     position: absolute;
     width: 50px;
     height: 16px;
 }
 
-.NEO #neo-scrollV div {
+.NEO #scrollV div {
     position: absolute;
     width: 16px;
     height: 50px;
 }
 
-/* .NEO #neo-scrollH div:hover {} */
-/* .NEO #neo-scrollV div:hover {} */
+/* .NEO #scrollH div:hover {} */
+/* .NEO #scrollV div:hover {} */
 
-.NEO #neo-neoWarning {
+.NEO #neoWarning {
     position: absolute;
     left: 5px;
     top: 5px;
@@ -572,7 +572,7 @@
 -----------------------
 */
 
-.NEO #neo-viewerButtonsWrapper {
+.NEO #viewerButtonsWrapper {
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -583,7 +583,7 @@
     padding: 0;
 }
 
-.NEO #neo-viewerButtons {
+.NEO #viewerButtons {
     width: calc(100% - 2px);
     height: 22px;
     border: 1px solid white;
@@ -598,7 +598,7 @@
     overflow: hidden;
 }
 
-.NEO #neo-viewerButtons > div {
+.NEO #viewerButtons > div {
     margin: 0;
     padding: 0;
     width: 18px;
@@ -615,7 +615,7 @@
     font-smoothing: antialiased;
 }
 
-.NEO #neo-viewerButtons > div.buttonOff {
+.NEO #viewerButtons > div.buttonOff {
     display: inline-block;
     border: 1px solid black;
     width: 18px;
@@ -628,10 +628,10 @@
     border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
-/* .NEO #neo-viewerButtons >div.buttonOff:hover {} */
+/* .NEO #viewerButtons >div.buttonOff:hover {} */
 
-.NEO #neo-viewerButtons > div.buttonOff:active,
-.NEO #neo-viewerButtons > div.buttonOn {
+.NEO #viewerButtons > div.buttonOff:active,
+.NEO #viewerButtons > div.buttonOn {
     display: inline-block;
     border: 1px solid black;
     width: 18px;
@@ -642,13 +642,13 @@
     border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
-.NEO #neo-viewerButtons canvas {
+.NEO #viewerButtons canvas {
     max-width: 24px;
     margin-left: 1px;
     margin-top: 1px;
 }
 
-.NEO #neo-viewerBarLeft {
+.NEO #viewerBarLeft {
     pointer-events: none;
     width: calc(100% - 2px);
     height: 16px;
@@ -657,7 +657,7 @@
     left: 1px;
 }
 
-.NEO #neo-viewerBarMark {
+.NEO #viewerBarMark {
     pointer-events: none;
     width: 1px;
     height: 16px;
@@ -666,7 +666,7 @@
     left: 1px;
 }
 
-.NEO #neo-viewerBarText {
+.NEO #viewerBarText {
     pointer-events: none;
     position: absolute;
     top: 0px;
