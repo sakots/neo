@@ -488,6 +488,10 @@ Neo.fixConfig = function (value) {
   return value;
 };
 
+/**
+ * スタイルシートを取得
+ * @returns {CSSStyleSheet|null}
+ */
 Neo.getStyleSheet = function () {
   var style = document.createElement("style");
   document.head.appendChild(style);
