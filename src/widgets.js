@@ -1419,9 +1419,9 @@ Neo.ColorSlider = class {
       this.update();
       Neo.updateUIColor(false, false);
     } else {
-      var r = Neo.sliders[Neo.SLIDERTYPE_RED].value;
-      var g = Neo.sliders[Neo.SLIDERTYPE_GREEN].value;
-      var b = Neo.sliders[Neo.SLIDERTYPE_BLUE].value;
+      const r = Neo.sliders[Neo.SLIDERTYPE_RED].value;
+      const g = Neo.sliders[Neo.SLIDERTYPE_GREEN].value;
+      const b = Neo.sliders[Neo.SLIDERTYPE_BLUE].value;
 
       Neo.painter.setColor((r << 16) | (g << 8) | b);
       Neo.updateUIColor(true, true);

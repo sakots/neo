@@ -1026,11 +1026,11 @@ Neo.colorNameToHex = function (name) {
     yellowgreen: "#9acd32",
   };
 
-  var rgb = name.toLowerCase().match(/rgb\((.*),(.*),(.*)\)/);
+  const rgb = name.toLowerCase().match(/rgb\((.*),(.*),(.*)\)/);
   if (rgb) {
-    var r = ("0" + parseInt(rgb[1]).toString(16)).slice(-2);
-    var g = ("0" + parseInt(rgb[2]).toString(16)).slice(-2);
-    var b = ("0" + parseInt(rgb[3]).toString(16)).slice(-2);
+    const r = ("0" + parseInt(rgb[1]).toString(16)).slice(-2);
+    const g = ("0" + parseInt(rgb[2]).toString(16)).slice(-2);
+    const b = ("0" + parseInt(rgb[3]).toString(16)).slice(-2);
     return "#" + r + g + b;
   }
 
