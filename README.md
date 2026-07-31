@@ -62,6 +62,12 @@ PaintBBS NEO の開発に参加している、[さとぴあ](https://github.com/
 ### Javaアプレットを前提とした古い掲示板でNEOを使うための[移行ガイド](README-potiboard.md)      
 (古い PHP のコードには色々問題がありますので、お勧めできません)
 
+### PaintBBS NEOのサポート
+**掲示板の設置以外についての質問・要望は[こちら](https://github.com/funige/neo/issues)でお願いします。**
+
+## [動作確認用掲示板](http://futabize.websozai.jp)
+
+以前ここで公開していた旧掲示板は[こちら](http://neo.websozai.jp)。
 
 ### 起動オプション
 - PaintBBS オリジナルの起動オプションについては[オリジナルの README](https://web.archive.org/web/20070822002857/https://hp.vector.co.jp/authors/VA016309/paintbbs/document/Readme_Shichan.html)
@@ -139,13 +145,6 @@ document.addEventListener("neo:fullscreenchange", (e) => {
 `Neo.setStabilizeLevel(5)`引数0-5の範囲で、手ぶれ補正の強度を設定します。    
 0で手ぶれ補正なし、5で最大。  
 無指定の時には、手ぶれ補正機能が無効になります。     
-
-### PaintBBS NEOのサポート
-**掲示板の設置以外についての質問・要望は[こちら](https://github.com/funige/neo/issues)でお願いします。**
-
-## [動作確認用掲示板](http://futabize.websozai.jp)
-
-以前ここで公開していた旧掲示板は[こちら](http://neo.websozai.jp)。
 
 ## <a name="app">Mac/Win 用アプリについて</a>
 
