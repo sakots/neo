@@ -1886,18 +1886,18 @@ Neo.Painter = class {
    * @returns {boolean|undefined} 描画を許可するなら true、禁止なら false、マスク無効なら undefined
    */
   isMasked(buf8, index) {
-    var r = this._currentMask[0];
-    var g = this._currentMask[1];
-    var b = this._currentMask[2];
+    const r = this._currentMask[0];
+    const g = this._currentMask[1];
+    const b = this._currentMask[2];
 
-    var r1 = this._currentColor[0];
-    var g1 = this._currentColor[1];
-    var b1 = this._currentColor[2];
+    const r1 = this._currentColor[0];
+    const g1 = this._currentColor[1];
+    const b1 = this._currentColor[2];
 
-    var r0 = buf8[index + 0];
-    var g0 = buf8[index + 1];
-    var b0 = buf8[index + 2];
-    var a0 = buf8[index + 3];
+    let r0 = buf8[index + 0];
+    let g0 = buf8[index + 1];
+    let b0 = buf8[index + 2];
+    let a0 = buf8[index + 3];
 
     if (a0 == 0) {
       r0 = 0xff;
@@ -2288,6 +2288,10 @@ Neo.Painter = class {
    * @returns {void}
    */
   setDodgePoint(buf8, width, x, y) {
+    let r1;
+    let g1;
+    let b1;
+
     var d = this._currentWidth;
     const r0 = Math.floor(d / 2);
     x -= r0;
@@ -2310,19 +2314,19 @@ Neo.Painter = class {
           let a0 = buf8[index + 3] / 255.0;
 
           if (a1 != 255.0) {
-            var r1 = (r0 * 255) / (255 - a1);
-            var g1 = (g0 * 255) / (255 - a1);
-            var b1 = (b0 * 255) / (255 - a1);
+            r1 = (r0 * 255) / (255 - a1);
+            g1 = (g0 * 255) / (255 - a1);
+            b1 = (b0 * 255) / (255 - a1);
           } else {
-            var r1 = 255.0;
-            var g1 = 255.0;
-            var b1 = 255.0;
+            r1 = 255.0;
+            g1 = 255.0;
+            b1 = 255.0;
           }
 
-          var r = Math.ceil(r1);
-          var g = Math.ceil(g1);
-          var b = Math.ceil(b1);
-          var a = a0;
+          const r = Math.ceil(r1);
+          const g = Math.ceil(g1);
+          const b = Math.ceil(b1);
+          let a = a0;
 
           var tmp = a * 255;
           a = Math.ceil(tmp);
@@ -2349,6 +2353,10 @@ Neo.Painter = class {
    * @returns {void}
    */
   setBurnPoint(buf8, width, x, y) {
+    let r1;
+    let g1;
+    let b1;
+
     var d = this._currentWidth;
     const r0 = Math.floor(d / 2);
     x -= r0;
@@ -2371,19 +2379,19 @@ Neo.Painter = class {
           let a0 = buf8[index + 3] / 255.0;
 
           if (a1 != 255.0) {
-            var r1 = 255 - ((255 - r0) * 255) / (255 - a1);
-            var g1 = 255 - ((255 - g0) * 255) / (255 - a1);
-            var b1 = 255 - ((255 - b0) * 255) / (255 - a1);
+            r1 = 255 - ((255 - r0) * 255) / (255 - a1);
+            g1 = 255 - ((255 - g0) * 255) / (255 - a1);
+            b1 = 255 - ((255 - b0) * 255) / (255 - a1);
           } else {
-            var r1 = 0;
-            var g1 = 0;
-            var b1 = 0;
+            r1 = 0;
+            g1 = 0;
+            b1 = 0;
           }
 
-          var r = Math.floor(r1);
-          var g = Math.floor(g1);
-          var b = Math.floor(b1);
-          var a = a0;
+          const r = Math.floor(r1);
+          const g = Math.floor(g1);
+          const b = Math.floor(b1);
+          let a = a0;
 
           var tmp = a * 255;
           a = Math.ceil(tmp);
