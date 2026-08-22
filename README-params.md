@@ -282,9 +282,8 @@ v1.6 からはより安全で扱いやすい formData を使ったデータ送�
 ```
 <param name="url_exit" value="./?pwd="パスワード">
 ```
-これをより安全なPOSTに変更する事ができるようになりました。 投稿が完了して画面が移動する直前に、`Neo.handleExit()`関数を実行します。  
+これをより安全なPOSTに変更する事ができるようになりました。 投稿ボタンを押したあとの画面移動時に、`Neo.handleExit()`関数を実行する事ができるようになりました。    
 この関数でFetch APIを使ったPOSTを行えばパスワードなどの機密データをより安全に送信する事ができます。  
-例)
 ```
 Neo.handleExit = ()=>{
 	const formData = new FormData();
